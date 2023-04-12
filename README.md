@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://4.bp.blogspot.com/-9kYSwCDRbms/W-qSUvwnFWI/AAAAAAAAEsE/j4EeFEPQHBc-QpxMV9l3gQAaLAuG2WhTgCLcBGAs/s1600/spring-framework.png" alt="Logo" width="300" height="150">
+    <img src="https://programadoresbrasil.com.br/wp-content/uploads/2021/05/spring-framework.png" alt="Logo" width="300" height="200">
   </a>
 
   <h2 align="center">Serviço Carteira</h2>
@@ -39,7 +39,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-Breve descrição do projeto e seu objetivo.
+Este projeto consiste em desenvolver um micro serviço que trabalhará com outros micro serviços: Ativo Financeiro, Investidor e Carteira. Cada micro serviço tem suas próprias responsabilidades e tecnologias.
+O micro serviço Carteira é o núcleo do aplicativo e será responsável por gerenciar todas as operações dentro do sistema, incluindo cadastro de ativos e proventos. Ele será desenvolvido utilizando Java como tecnologia de backend e Sqlite como banco de dados.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -50,14 +51,9 @@ Breve descrição do projeto e seu objetivo.
 Nesta seção apresente as tecnologias utilizadas para a construção do projeto.
 
 Exemplo:
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
+* ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+* ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,32 +67,29 @@ Copie e cole trechos de códigos para realizar a execução do projeto.
 
 ### Pré-requisitos 
 
-Caso exista algum pré-requisito adicione aqui. 
+* Java 17
+* Docker
 
-Exemplo:
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Instalação
 
-Insira o passo a passo de como iniciar o projeto, exemplo:
+Siga os passos para a instalação do serviço:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+1.Clone o repositório 
+  ```sh
+   git clone https://github.com/DanubiaM/carteira
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Acesse a pasta onde se encontra o dockerfile e crie uma image
+  ```sh
+  docker build -t nome_da_imagem .
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   
+3. Execute o container
+```sh
+docker run nome_da_imagem
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
