@@ -82,7 +82,7 @@
         </dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
+			<groupId>org.springfram ework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<version>3.0.6</version>
 		</dependency>
@@ -98,7 +98,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit-test</artifactId>
+			<scope>test</scope>
+		</dependency>
     </dependencies>
 
 	<build>
