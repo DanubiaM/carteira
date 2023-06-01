@@ -12,6 +12,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @RequestMapping("/wallet")
 @RestController
@@ -56,6 +57,17 @@ public class WalletController {
     public ResponseEntity<?> atualizar(@Valid @RequestBody AtivoFinanceiroDto ativoFinanceiroDto){
         ativoFinanceiroService.atualizar(ativoFinanceiroDto);
         return new ResponseEntity<>(HttpStatus.OK);
-
     }
+
+    @GetMapping("buscarHistorico/{id}")
+    public ResponseEntity<?> buscarHistorico(@PathVariable("id") String ticker){
+
+
+        final String uri = "http://192.168.144.134:3333/assets?symbol="+ticker;
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
+        return new ResponseEntity<>(result.getBody(),HttpStatus.OK);
+    }
+
 }
