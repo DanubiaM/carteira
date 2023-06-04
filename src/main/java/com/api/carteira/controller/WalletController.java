@@ -6,6 +6,7 @@ import com.api.carteira.service.AtivoFinanceiroService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -21,6 +22,8 @@ public class WalletController {
     @Autowired
     AtivoFinanceiroService ativoFinanceiroService;
 
+    @Value("${IP_SERVICE_AF}")
+    String ip_af;
 
     @PostMapping
     ResponseEntity<?> salvar(@RequestBody AtivoFinanceiroDto ativoFinanceiroDto){
@@ -63,7 +66,7 @@ public class WalletController {
     public ResponseEntity<?> buscarHistorico(@PathVariable("id") String ticker){
 
 
-        final String uri = "http://192.168.144.134:3333/assets?symbol="+ticker;
+        final String uri = "http://"+ip_af+":3333/assets?symbol="+ticker;
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
