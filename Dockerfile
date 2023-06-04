@@ -11,4 +11,4 @@ COPY target/carteira-0.0.1-SNAPSHOT.jar /app
 EXPOSE 8080
 
 # Defina o comando padrão a ser executado quando o contêiner for iniciado
-CMD ["java", "-jar", "carteira-0.0.1-SNAPSHOT.jar.jar"]
+CMD ["java", "-jar", "carteira-0.0.1-SNAPSHOT.jar"]
