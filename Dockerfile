@@ -1,18 +1,14 @@
-FROM maven:3.8.3-openjdk-17 AS build
+# Use uma imagem base do OpenJDK 17
+FROM openjdk:17-jdk-slim-buster
 
-COPY src /app/src
-COPY pom.xml /app
-RUN mvn -f /app/pom.xml clean package -Dmaven.test.skip=true
+# Defina o diretório de trabalho
+WORKDIR /app
 
-FROM openjdk:17-alpine
+# Copie o arquivo JAR da aplicação para o contêiner
+COPY target/carteira-0.0.1-SNAPSHOT.jar /app
 
-COPY --from=build /app/target/*.jar app.jar
-
+# Exponha a porta em que a aplicação está sendo executada
 EXPOSE 8080
 
-ENV USUARIO_DB admin
-ENV SENHA_DB admin
-ENV PROFILE dev
-ENV NOME_DB walletdatabase
-
-ENTRYPOINT ["java","-jar","/app.jar"]
+# Defina o comando padrão a ser executado quando o contêiner for iniciado
+CMD ["java", "-jar", "carteira-0.0.1-SNAPSHOT.jar.jar"]
