@@ -30,9 +30,9 @@
     <img src="https://programadoresbrasil.com.br/wp-content/uploads/2021/05/spring-framework.png" alt="Logo" width="300" height="200">
   </a>
 
-  <h2 align="center">Serviço Carteira</h2>
+<h2 align="center">Serviço Carteira</h2>
 
- 
+
 </div>
 
 
@@ -65,7 +65,7 @@ Exemplo:
 Insira instruções de como iniciar o seu projeto localmente.
 Copie e cole trechos de códigos para realizar a execução do projeto.
 
-### Pré-requisitos 
+### Pré-requisitos
 
 * Java 17
 * Docker
@@ -76,7 +76,7 @@ Copie e cole trechos de códigos para realizar a execução do projeto.
 
 Siga os passos para a instalação do serviço:
 
-1.Clone o repositório 
+1.Clone o repositório
   ```sh
    git clone https://github.com/DanubiaM/carteira
    ```
@@ -84,7 +84,7 @@ Siga os passos para a instalação do serviço:
   ```sh
   docker build -t nome_da_imagem .
    ```
-   
+
 3. Execute o container
 ```sh
 docker run nome_da_imagem
