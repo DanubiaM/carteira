@@ -48,12 +48,11 @@ O micro serviço Carteira é o núcleo do aplicativo e será responsável por ge
 
 ### Construido com
 
-Nesta seção apresente as tecnologias utilizadas para a construção do projeto.
-
-Exemplo:
 * ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 * ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 * ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+* Keycloak
+* RabbitMQ
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,6 +106,8 @@ Com o serviço em execução, explique como utilizar o projeto, exemplo:
 | Carteira | /wallet | POST | Adiciona um novo ativo para o investidor |
 | Carteira | /wallet/:id | PUT | Atualiza informações específicas da carteira do usuário |
 | Carteira | /wallet/:id | DELETE | Remove um ativo específico da carteira do usuário |
+| Carteira | /wallet/buscarhistorico/:id | GET | Buscar Histórico de Ativo Financeiro |
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -114,26 +115,15 @@ Com o serviço em execução, explique como utilizar o projeto, exemplo:
 
 <!-- CONTRIBUTING -->
 ## Autores
-Adicione os autores aqui
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENÇA -->
-## License
-
-Caso exista uma licença, adicione aqui.
+@DanubiaM
+@WigorErnandes
+@LeonardoQueiroz
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- CONTACT -->
-## Contato
-Adicione aqui o contato do projeto
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
